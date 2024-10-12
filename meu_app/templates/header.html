@@ -1,0 +1,108 @@
+ {% load static %}  <!-- Carregar as tags estáticas -->
+<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/headers/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+ <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #00C3DD;
+    padding: 10px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    padding-top:20px ;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    line-height: 30px;
+    padding: 10px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li a {
+        margin: 10px 0;
+
+    }
+
+
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+</style>
+
+    <header>
+        <div class="container">
+        <nav>
+            <div class="logo">SOS Pets</div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="menu">
+                <li><a href="#">Cadastrar Pet Perdido</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Dúvidas Frequentes</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+
+
+        </nav>
+        </div>
+    </header>

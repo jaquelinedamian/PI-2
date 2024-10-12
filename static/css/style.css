@@ -1,0 +1,21 @@
+footer {
+    position: fixed;
+    button:0px;
+
+}
+
+  footer {
+    position: fixed;
+    bottom:0px;
+
+    width: 100%;
+
+    border-top: 1px solid #ccc;
+    padding: 20px 0;
+    background: #f7f7f7;
+}
+
+    .footer-svg {
+    color:#ADADAD; /* Muda a cor do SVG */
+  }
+</style>
