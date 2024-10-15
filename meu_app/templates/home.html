@@ -27,6 +27,7 @@
         <p>Essa é uma página estática com Bootstrap.</p>
     </div>
 
+  {{pets}}
 
     <div class="container">
 
@@ -36,7 +37,16 @@
 
     <h2 class="mt-4">Five grid tiers</h2>
     <p>There are five tiers to the Bootstrap grid system, one for each range of devices we support. Each tier starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</p>
+{% for pet in pets%}
 
+        <div class="row mb-3 text-center">
+      <div class="col-4 themed-grid-col">
+          {{pet.nome}}
+       {{pet.tipo}}
+      </div>
+    </div>
+
+{%endfor%}
     <div class="row mb-3 text-center">
       <div class="col-4 themed-grid-col">.col-4</div>
       <div class="col-4 themed-grid-col">.col-4</div>
